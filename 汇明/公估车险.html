@@ -1,0 +1,241 @@
+<!-- https://v3.bootcss.com/getting-started/ -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+  	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	    <title>公估车险</title>
+
+	    <!-- Bootstrap -->
+	    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+	    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+	    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+	    <!--[if lt IE 9]>
+	      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    <link rel="stylesheet" type="text/css" href="首页.css">
+	    <link rel="stylesheet" type="text/css" href="公估车险.css">
+  	</head>
+
+
+  	<body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button> -->
+          <a class="navbar-brand" href="首页.html">北京汇明保险公估</a>
+        </div>
+        <!-- 顶部导航栏 -->
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span>个人中心</a></li>
+            <li><a href="#">客户管理</a></li>
+            <li><a href="公估车险.html">公估车险</a></li>
+            <li><a href="公估非车.html">公估非车</a></li>
+            <li><a href="#">反欺诈</a></li>
+            <li><a href="#">财务</a></li>
+            <li><a href="#">统计</a></li>
+            <li><a href="#"><span class="glyphicon  glyphicon-cog"></span>系统</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="wrapper" class="toggled">
+    	<!-- Sidebar -->
+      	<div id="sidebar-wrapper">
+	        <ul class="sidebar-nav">
+	          <li class="sidebar-brand">
+	            <a href="#">公估车险</a>
+	            <a><span class="glyphicon  glyphicon-search"></span></a>
+	            <a><span class="glyphicon  glyphicon-menu-hamburger"></span></a>
+	          </li>
+	          <li>
+	            <a href="#"><span class="glyphicon  glyphicon-th-list"></span>案件报表</a>
+	          </li>
+	          <li>
+	            <a href="#"><span class="glyphicon  glyphicon-plus"></span>新增案件</a>
+	          </li>
+	        </ul>
+      	</div>
+    	<!-- /#sidebar-wrapper -->
+
+
+    	<!-- Page Content -->
+	    <div id="page-content-wrapper">
+	    	<!-- form bar -->
+	    	<form class="form-inline" role="form">
+	    		<div class="form-group">
+	    			<label for="status"></label>
+		    		<select class="form-control">
+		    			<option>进行中</option>
+		    			<option>1</option>
+		    			<option>2</option>
+		    		</select>
+	    		</div>
+
+	    		<div class="form-group">
+	    			<input type="date" name="date" placeholder="日期">
+	    		</div>
+
+	    		<div class="form-group">
+	    			<input type="text" name="date" placeholder="报案号/姓名">
+	    		</div>
+	    		<button type="submit" class="btn btn-default">搜索</button>
+	    	</form>
+
+	    	<div class="btn-group" data-toggle="buttons">
+	    		<label class="btn btn-default btn0">
+	    			<input type="radio" name="options">全部状态
+	    		</label>
+	    		<label class="btn btn-default btn1">
+	    			<input type="radio" name="options">未提交
+	    		</label>
+	    		<label class="btn btn-default btn2">
+	    			<input type="radio" name="options">未核损
+	    		</label>
+	    		<label class="btn btn-default btn3">
+	    			<input type="radio" name="options">核损通过
+	    		</label>
+	    		<label class="btn btn-default btn4">
+	    			<input type="radio" name="options">核损退回
+	    		</label>
+	    		<label class="btn btn-default btn5">
+	    			<input type="radio" name="options">核损注销
+	    		</label>	
+	    	</div>
+
+	    	<!-- <div class="search-bar"> -->
+		    	<button type="submit" class="btn btn-default pull-right" id="export">导出</button>
+		    	<button type="submit" class="btn btn-default pull-right">详情</button>
+	    	<!-- </div> -->
+
+
+	    	<table class="table table-bordered table-striped">
+	    		<thead class="text-center">
+	    			<tr>
+	    				<td></td>
+	    				<td>查勘预警</td>
+	    				<td>定损预警</td>
+	    				<td>核退预警</td>
+	    				<td>报案号</td>
+	    				<td>赔案号</td>
+	    				<td>定损员</td>
+	    				<td>查勘状态</td>
+	    				<td>案件状态</td>
+	    				<td>定损金额（元）</td>
+	    				<td>备注</td>
+	    				<td></td>
+	    			</tr>
+	    		</thead>
+	    		<tbody class="text-center">
+	    			<tr>
+	    				<td>1</td>
+	    				<td></td>
+	    				<td><span class="glyphicon  glyphicon-alert" style="color: red"></td>
+	    				<td></td>
+	    				<td>64558415481115</td>
+	    				<td>64558415481115</td>
+	    				<td>王志强</td>
+	    				<td>已接单</td>
+	    				<td>核损退回</td>
+	    				<td>3000</td>
+	    				<td></td>
+	    				<td><span id="操作">操作</span></td>
+	    			</tr>
+	    			<tr>
+	    				<td>2</td>
+	    				<td><span class="glyphicon  glyphicon-alert"></td>
+	    				<td></td>
+	    				<td></td>
+	    				<td>64558415481115</td>
+	    				<td>64558415481115</td>
+	    				<td>王志强</td>
+	    				<td>已接单</td>
+	    				<td>核损通过</td>
+	    				<td>3000</td>
+	    				<td></td>
+	    				<td>
+	    					<div class="btn-group">
+							    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="more">操作
+							        <span class="caret"></span>
+							    </button>
+							    <ul class="dropdown-menu" role="menu">
+							        <li>
+							            <a href="#">详情</a>
+							        </li>
+							        <li>
+							            <a href="#">更改状态</a>
+							        </li>
+							        <li>
+							            <a href="#">催办</a>
+							        </li>
+							        <li>
+							            <a href="#">编辑</a>
+							        </li>
+							        <li>
+							            <a href="#">删除</a>
+							        </li>
+							    </ul>
+							</div>
+	    				</td>
+	    			</tr>
+	    			<tr>
+	    				<td>3</td>
+	    				<td><span class="glyphicon  glyphicon-alert"></td>
+	    				<td></td>
+	    				<td></td>
+	    				<td>64558415481115</td>
+	    				<td>64558415481115</td>
+	    				<td>王志强</td>
+	    				<td>已接单</td>
+	    				<td>核损通过</td>
+	    				<td>3000</td>
+	    				<td></td>
+	    				<td><a href="#">操作</a></td>
+	    			</tr>
+	    			<tr>
+	    				<td>4</td>
+	    				<td><span class="glyphicon  glyphicon-alert"></td>
+	    				<td></td>
+	    				<td></td>
+	    				<td>64558415481115</td>
+	    				<td>64558415481115</td>
+	    				<td>王志强</td>
+	    				<td>已接单</td>
+	    				<td>核损通过</td>
+	    				<td>3000</td>
+	    				<td></td>
+	    				<td><a href="#">操作</a></td>
+	    			</tr>
+	    		</tbody>
+	    	</table>
+	    	<div class="M-box1"></div>
+	    	<!-- <footer class="footer"></footer> -->
+	    </div>
+	    <!-- /#page-content-wrapper -->
+  	</div>
+
+  	
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/JavaScript" src="页脚统计.js"></script>
+    <!-- <script src="jquery.js"></script>
+    <script src="jquery.pagination.js"></script>
+ -->
+    <!-- <script type="text/JavaScript" src="登录页.js"></script> -->
+
+	</body>
+</html>

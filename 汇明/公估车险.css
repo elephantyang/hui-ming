@@ -1,0 +1,40 @@
+
+table{
+	margin-top: 15px;
+}
+
+.btn2{
+	color: orange;
+}
+
+.btn3{
+	color: green;
+}
+
+.btn4{
+	color: red;
+}
+
+.btn5{
+	color: gray;
+}
+thead{
+	font-weight: bold;
+}
+
+.form-inline{
+	display: inline;
+}
+
+.form-group{
+	margin: 5px;
+}
+
+#export{
+	margin-left: 3px;
+}
+
+#more{
+	border-color: transparent;
+	background-color: transparent;
+}

@@ -1,0 +1,34 @@
+body{
+	background-color: #e0f2f2;
+}
+
+h3{
+	font-weight: bold;
+	margin-top: 150px;
+	margin-bottom: 30px;
+}
+.form-signin{
+	max-width: 330px;
+	padding: 30px;
+	margin: auto;
+	background-color: white;
+}
+
+
+#btn-submit{
+	width: 35%;
+	display: block;
+	margin:0 auto;
+}
+
+#copyright{
+	padding-top: 15px;
+}
+
+#logo{
+	max-width: 100px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: block;
+	margin: 0 auto;
+}
